@@ -4,7 +4,7 @@ use std::thread;
 fn main() {
     // Once you've set up the Shop and Card structs, you should be able to
     // uncomment this code
-    
+
     let comic_book_shoppe = Shop {
         cards: [
             Card {
@@ -68,7 +68,7 @@ fn main() {
 
 /// A Shop is a collection of 3 cards.
 struct Shop {
-    cards: [Card;3]
+    cards: [Card; 3],
 }
 
 impl Shop {
