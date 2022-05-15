@@ -4,26 +4,26 @@ use std::thread;
 fn main() {
     // Once you've set up the Shop and Card structs, you should be able to
     // uncomment this code
-    //
-    // let comic_book_shoppe = Shop {
-    //     cards: [
-    //         Card {
-    //             price: 10,
-    //             health: 10,
-    //             damage: 10,
-    //         },
-    //         Card {
-    //             price: 20,
-    //             health: 20,
-    //             damage: 20,
-    //         },
-    //         Card {
-    //             price: 30,
-    //             health: 30,
-    //             damage: 30,
-    //         },
-    //     ],
-    // };
+    
+    let comic_book_shoppe = Shop {
+        cards: [
+            Card {
+                price: 10,
+                health: 10,
+                damage: 10,
+            },
+            Card {
+                price: 20,
+                health: 20,
+                damage: 20,
+            },
+            Card {
+                price: 30,
+                health: 30,
+                damage: 30,
+            },
+        ],
+    };
 
     println!("Welcome to The Comic Book Shoppe!");
     println!("We've got three cards for you to check out.");
@@ -68,7 +68,7 @@ fn main() {
 
 /// A Shop is a collection of 3 cards.
 struct Shop {
-    // TOOD: Add the field to this struct
+    cards: [Card;3]
 }
 
 impl Shop {
@@ -90,7 +90,9 @@ impl Shop {
 
 /// A Card is a card stores a price, health, and damage.
 struct Card {
-    // TODO: Add fields to this struct
+    price: i128,
+    health: i128,
+    damage: i128,
 }
 
 #[cfg(test)]
