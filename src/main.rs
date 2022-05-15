@@ -74,25 +74,39 @@ struct Shop {
 impl Shop {
     /// Get the price of the most expensive card in the shop
     fn most_expensive(&self) -> u32 {
-        todo!()
+        let mut highest_price = 0;
+        for card in &self.cards {
+            if card.price > highest_price {
+                highest_price = card.price;
+            }
+        }
+        highest_price
     }
 
     /// Get the total damage of all cards in the shop
     fn total_damage(&self) -> u32 {
-        todo!()
+        let mut tot_damage = 0;
+        for card in &self.cards {
+            tot_damage += card.damage;
+        }
+        tot_damage
     }
 
     /// Get the total health of all cards in the shop
     fn total_health(&self) -> u32 {
-        todo!()
+        let mut tot_health = 0;
+        for card in &self.cards {
+            tot_health += card.health;
+        }
+        tot_health
     }
 }
 
 /// A Card is a card stores a price, health, and damage.
 struct Card {
-    price: i128,
-    health: i128,
-    damage: i128,
+    price: u32,
+    health: u32,
+    damage: u32,
 }
 
 #[cfg(test)]
